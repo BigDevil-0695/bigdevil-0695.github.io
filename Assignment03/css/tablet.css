@@ -4,6 +4,7 @@
   }
   /* Chỉnh sửa kích thước ảnh nền và banner cho phù hợp với màn hình tablet */
   header {
+    height:80vh;
     background-size: 100% 100%;
   }
   #banner {
@@ -20,93 +21,108 @@
   }
   /* cài đặt chung cho những khối sử dụng grid-layout */
   .grid,
-  .info-target .grid,
   .certi-content .grid {
     grid-template-columns: repeat(2, 50%);
   } 
   /* Phần thông tin cá nhân, mục tiêu nghề nghiệp */
-  .info-target {
+  .container-1 {
     width: 100%;
     height: auto;
   }
-  .info-target h1 {
-    margin-bottom: 0px;
-  }
-  .info-target #target {
-    width: auto;
-    margin: 50px;
+  #target {
+    width: 100%;
+    height: 100%;
+
   }
   #target p {
     margin-top: 10px;
+    width: 100%;
+    padding-right: 30px;
   }
-  .info-target #personal-info {
-    width: auto;
-    margin: 50px;
-    padding-left: 20px;
-    order: 2;
+  #personal-info {
+    width: 100%;
+    height: 100%;
+    padding-left: 0px;
   }
   /* Cài đật chung cho 6 khối thông tin nghề nghiệp, sở thích... cho phù hợp với màn hình tablet */
   /* Thay đổi cách cài đặt vị trí cho từng khối bằng order thay vì grid-column, grid-row để vị trí các khối điều chỉnh linh hoạt theo kích thước màn hình */
   .container-info {
-    grid-template-columns: repeat(2, 1fr);
+    display:grid;
+    margin-left: 20px;
+    margin-right: 40px;
+    grid-template-columns: repeat(2, 50%);
     align-items: stretch;
     height: auto;
+    width:auto;
+  }
+  .container-info .cont-title {
+    margin-left: 20px;
   }
   .experience {
     order: 1;
+  
+
   }
   .education {
     order: 3;
+   
   }
   .activ {
     order: 6;
     margin-top: 0px;
+   
   }
   .skill {
     order: 2;
+   
   }
   .hobby {
     order: 4;
+    
+  }
+  .hobby .icon-hobb {
+    width: 80%;
   }
   .laguage {
     order: 5;
+
   }
   /* Khối Chứng chỉ- Giải thưởng */
   /* THay đổi kích thước hình ảnh và nội dung để phù hợp màn hình tablet */
   .certi-content {
-    width: auto;
+    width: 100%;
     display: grid;
     position: relative;
     grid-template-columns: 50% 50%;
     gap: 20px;
     height: auto;
-    margin-left: 20px;
+    margin-left: -20px;
   }
-
+  .cont-title {
+    margin-left: -20px;
+  }
   .certi-1:first-child {
-    display: grid;
+    display:block;
     position: relative;
     height: auto;
-    bottom: 1.5em;
-    gap: 10px;
-    grid-template-columns: 40% 60%;
     border-right: solid 1px #d6c08d;
-    margin-right: -20px;
-    margin-top: 30px;
+    padding-right: 20px;
+    margin-top: 40px;
+  }
+  .certi-1 .content1 {
+    width:auto;
+    padding-top: 30px;
   }
   .certi-2:nth-child(2) {
-    display: grid;
+    display: block;
     position: relative;
     height: auto;
-    bottom: 1.5em;
-    gap: 5px;
-    grid-template-columns: 40% 60%;
     padding-left: 20px;
-    margin-top: 30px;
+    margin-top: 40px;
   }
   .certi-2 .content2 {
-    margin-left: 20px;
     width: auto;
+    padding-top: 30px;
   }
   .certi-3:nth-child(3) {
     display: grid;
@@ -114,40 +130,53 @@
     height: auto;
     grid-column: 1 / span2;
     gap: 10px;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60% 40%;
     border-top: solid 1px #d6c08d;
     margin-top: -20px;
-    padding-top: 30px;
+    padding-top: 40px;
+
   }
   .certi-3 .content3 {
     width: auto;
+    padding-top: 30px;
   }
-  .cert-img {
-    width: auto;
+
+  .img-fluid {
+    width:100%;
+  }
+  
+  .certi-3 .img-fluid{
+    width: 48%;
     height: 100%;
   }
   .name-certi {
     text-transform: uppercase;
     font-size: 18px;
   }
-  .certi-content {
+  .certi-value {
     text-align: left;
     font-size: 15px;
   }
-  .certi-content ul li {
+  .certi-value ul li {
+    width: 200%;
     list-style: none;
-    margin-left: -20px;
+    margin-left: -30px;
   }
   /* Phần Dự Án */
   /* Thay đổi đơn vị của width, height linh hoạt phù hợp theo kích cỡ màn hình */
   #project {
     width: 100%;
     height: auto;
+    margin-left: -30px;
   }
   .project-content {
     width: 100%;
     height: auto;
     margin-left: 20px;
+  }
+  .name-project {
+    height:auto;
   }
   .project-title {
     height: auto;
@@ -158,15 +187,15 @@
   }
   .project-1 {
     width: 100%;
-    height: 700px;
+    height: auto;
   }
   .project-2 {
     width: 100%;
-    height: 700px;
+    height: auto;
   }
   .project-3 {
     width: 100%;
-    height: 700px;
+    height: auto;
   }
   /* Phần Footer */
   /* Chỉnh sửa lại font-size, width, height cho phù hợp, sử dụng đơn vị % */
@@ -175,8 +204,8 @@
   }
   .foot {
     font-size: 100%;
-    height: 70%;
-    width: 70%;
-    margin: 0px 30px;
+    height: 80%;
+    width: 80%;
+    margin: 0px 70px;
   }
 }
