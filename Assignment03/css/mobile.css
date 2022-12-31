@@ -191,6 +191,9 @@
     height: auto;
     padding-left: 30px;
   }
+  #project h1 {
+    margin-left: 20px;
+  }
   .project-content {
     width: 100%;
     
