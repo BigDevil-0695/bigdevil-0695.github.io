@@ -142,7 +142,8 @@
     gap: 30px;
     position: relative;
     height: auto;
-    margin-left: 50px;
+    margin-left: 70px;
+    margin-right: -10px;
     margin-bottom: 50px;
     align-items: stretch;
   }
