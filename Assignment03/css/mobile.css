@@ -5,6 +5,7 @@
   /* Phần Banner */
   /* Căn chỉnh lại kích thước ảnh và banner cho phù hợp màn hình điện thoại */
   header {
+    height:70vh;
     background-size: 100% 100%;
   }
   #banner {
@@ -20,36 +21,39 @@
     border-style: none;
   }
   .navbar .nav {
+    margin-left: 20px;
     display: block;
     text-align: left;
-    padding-left: 15%;
+    border-style: none;
   }
   .navbar .nav-3 {
     display: none;
   }
   /* Cài đặt chung cho những khối sử dụng grid-layout */
   .grid,
-  .info-target .grid,
   .container-info .grid,
   .certi-content .grid,
   .project-content .grid {
     grid-template-columns: 1fr;
   }
   /* Phần mục tiêu nghề nghiệp, thông tin cá nhân */
-  .info-target #target {
-    width: 400px;
-    margin: 50px 40px 0px 20px;
-    padding-left: 30px;
-    grid-area: 1;
+  .container-1 {
+    margin-left: 10px;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+  #target {
+    width: 95%;
+    padding-left: 0px;
   }
   #target p {
     margin-top: 40px;
+    margin-right: -20px;
   }
-  .info-target #personal-info {
-    width: 400px;
-    margin: 50px 40px 0px 20px;
-    padding-left: 30px;
-    grid-area: 2;
+  #personal-info {
+    width: 100%;
   }
   #personal-info ul {
     margin-top: 40px;
@@ -62,13 +66,18 @@
   #job-info {
     height: auto;
     margin-top: 30px;
+    width: 100%;
+    margin-left: 10px;
   }
   .container-info {
-    margin-left: 60px;
+    display:grid;
+    grid-template-columns: 1fr;
+    align-items: stretch;
+    width: auto;
   }
   .container-info .experience {
     height: auto;
-    width: 125%;
+    width: auto;
     grid-column: 1;
     grid-row: 1;
     margin-bottom: 50px;
@@ -76,35 +85,42 @@
   .container-info .activ {
     margin-top: -20px;
     height: auto;
-    width: 125%;
+    width: auto;
     grid-column: 1;
     grid-row: 2;
   }
   .container-info .education {
     margin-top: 20px;
     height: auto;
-    width: 125%;
+    width: auto;
     grid-column: 1;
     grid-row: 3;
   }
   .container-info .hobby {
     margin-top: 20px;
     height: auto;
-    width: 125%;
+    width: auto;
     grid-column: 1;
     grid-row: 4;
+  }
+  .hobby .icon-hobb {
+    margin-top: 20px;
+    margin-right: 10px;
+  }
+  .hobby .icon-hobb p{
+    margin-left: -10px;
   }
   .container-info .skills {
     margin-top: 20px;
     height: auto;
-    width: 125%;
+    width: auto;
     grid-column: 1;
     grid-row: 5;
   }
   .container-info .language {
     margin-top: 20px;
     height: auto;
-    width: 125%;
+    width: auto;
     grid-column: 1;
     grid-row: 6;
   }
@@ -112,16 +128,20 @@
   #certificate {
     height: auto;
     width: 100vw;
+    padding-left: 10px;
   }
   .cert-img {
     width: 80%;
     height: auto;
   }
+  .cont-title {
+    margin-left: 20px;
+  }
   .certi-content {
     display: block;
-    padding-left: -20px;
     width: 100%;
     padding-bottom: 50px;
+    margin-left: 30px;
   }
   .certi-1:first-child {
     padding-top: 50px;
@@ -147,38 +167,33 @@
     padding-top: 30px;
     border: none;
   }
-  .content1 {
-    padding-top: 20px;
-    padding-left: 20px;
+  .certi-2 .img-fluid {
+    width: 95%;
   }
-  .content2 {
-    padding-right: 20px;
-  }
-  .content3 {
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+  .certi-3 .img-fluid {
+    width: 200%;
   }
   .name-certi {
     text-transform: uppercase;
     font-size: 18px;
   }
-  .certi-content {
+  .certi-value {
     text-align: left;
     font-size: 15px;
   }
-  .certi-content ul li {
+  .certi-value ul li {
     list-style: none;
-    margin-left: -20px;
+    margin-left: -30px;
   }
   /* Phần dự án */
   #project {
     width: 100%;
     height: auto;
+    padding-left: 30px;
   }
   .project-content {
     width: 100%;
-    margin-left: 0px;
+    
     align-items: stretch;
     justify-content: space-between;
   }
@@ -209,6 +224,6 @@
     font-size: 100%;
     height: 80%;
     width: 80%;
-    margin: 0px 30px;
+    margin: 0px 50px;
   }
 }
